@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Indie+Flower&family=Koulen&family=Montserrat&family=Odibee+Sans&family=Roboto&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="resultado.css" />
+
+    <title>Purified Water</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="section-home" id="section-home">
+      <header class="header">
+        <img src="logo-agua.png" alt="logo" class="logo" />
+        <ul class="header__ul">
+          <li><a href="#section-home" class="home">Inicio</a></li>
+          <li><a href="#section-form" class="contact">Contacto</a></li>
+          <li><a href="#price-form" class="buy">Comprar</a></li>
+        </ul>
+      </header>
+
+      <p class="presentation">
+        <em
+          >Purified Water, una empresa líder en la venta de bidones de agua de
+          calidad desde hace más de 20 años. Ofrecemos nuestros productos a todo
+          el país mediante la venta online a través de nuestra página web,
+          asegurándote una experiencia de compra más cómoda y rápida, además de
+          brindar un servicio más eficiente.</em
+        >
+      </p>
+    </section>
+
+    <section id="section-form">
+      <h2 class="section-form__title">
+        Venta y distribución de bidones de agua. La mejor calidad y servicio
+        para vos!
+      </h2>
+
+      <form>
+        <h3 class="form__title">Contacto</h3>
+        <div class="input-group">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Ingrese su nombre"
+          />
+          <span class="error" id="name-error"></span>
+          <label for="apellido">Apellido</label>
+          <input
+            typ="text"
+            name="apellido"
+            id="apellido"
+            placeholder="Ingrese su apellido"
+          />
+          <span class="error" id="apellido-error"></span>
+          <label for="phone">Teléfono</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Ingrese su número de teléfono"
+          />
+          <span class="error" id="phone-error"></span>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Ingrese su email"
+          />
+          <span class="error" id="email-error"></span>
+          <label for="message">Mensaje</label>
+          <textarea
+            name="message"
+            id="menssage"
+            cols="30"
+            rows="5"
+            placeholder="Ingrese su mensaje ..."
+          ></textarea>
+          <button type="button" id="submit" onclick="enviar ()">Enviar</button>
+        </div>
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="price-form" class="visible">
+      <h2 class="price-title">Iniciar Compra</h2>
+
+      <!-- PARTE NUEVA DE INICIAR COMPRA -->
+
+      <div class="container-price" class="visible">
+        <div class="container-product">
+          <img src="bidon.jpg" alt="5lt water" class="img-water" />
+          <div class="product-amount">
+            <div class="product-amount__description">
+              <h6 class="product-title">Bidón de 5 litros</h6>
+              <span class="price">$250</span>
+            </div>
+            <div class="product-amount__select">
+              <h6>Cantidad</h6>
+              <input
+                class="amount-input"
+                type="number"
+                id="primerArticulo"
+                name="cantidad"
+                min="1"
+                max="100"
+                step="1"
+              />
+            </div>
+          </div>
+          <div class="container-product">
+            <img src="bidon.jpg" alt="5lt water" class="img-water" />
+            <div class="product-amount">
+              <div class="product-amount__description">
+                <h6 class="product-title">Bidón de 10 litros</h6>
+                <span class="price">$350</span>
+              </div>
+              <div class="product-amount__select">
+                <h6>Cantidad</h6>
+                <input
+                  class="amount-input"
+                  type="number"
+                  id="segundoArticulo"
+                  name="cantidad"
+                  min="1"
+                  max="100"
+                  step="1"
+                />
+              </div>
+            </div>
+            <div class="container-product">
+                <img src="bidon.jpg" alt="5lt water" class="img-water" />
+                <div class="product-amount">
+                  <div class="product-amount__description">
+                    <h6 class="product-title">Bidón de 20 litros</h6>
+                    <span class="price">$600</span>
+                  </div>
+                  <div class="product-amount__select">
+                    <h6>Cantidad</h6>
+                    <input
+                      class="amount-input"
+                      type="number"
+                      id="tercerrArticulo"
+                      name="cantidad"
+                      min="1"
+                      max="100"
+                      step="1"
+                    />
+                  </div>
+                </div>
+          <button class="price-button" type="button" onclick="crearRecibo()">Cotizar</button>
+        </div>
+      </div>
+
+      <!-- PARTE VIEJA DE INICIAR COMPRA -->
+      <div class="container-fluid">
+        <div class="row d-flex border border-primary" style="height: 300px">
+          <div
+            class="col-md-4 border border-secondary d-flex justify-content-center"
+          >
+            <img
+              class="img-fluid"
+              src="bidon.jpg"
+              alt="bidon 5lt"
+              style="height: 300px; width: 500px"
+            />
+          </div>
+          <div
+            class="col-md-4 border border-secondary d-flex justify-content-center"
+          >
+            <img
+              class="img-fluid"
+              src="bidon.jpg"
+              alt="bidon 10lt"
+              style="height: 300px; width: 300px"
+            />
+          </div>
+          <div
+            class="col-md-4 border border-secondary d-flex justify-content-center"
+          >
+            <img
+              class="img-fluid"
+              src="bidon.jpg"
+              alt="bidon 20lt"
+              style="height: 300px; width: 300px"
+            />
+          </div>
+        </div>
+        <div class="row d-flex border border-primary" style="height: 100px">
+          <div
+            class="col-md-4 border border-secondary d-flex flex-column align-items-center justify-content-center"
+          >
+            <span>Bidon de Agua 5LT</span><br /><span>250$</span>
+          </div>
+          <div
+            class="col-md-4 border border-secondary d-flex flex-column align-items-center justify-content-center"
+          >
+            <span>Bidon de Agua 10LT</span><br /><span>350$</span>
+          </div>
+          <div
+            class="col-md-4 border border-secondary d-flex flex-column align-items-center justify-content-center"
+          >
+            <span>Bidon de Agua 20LT</span><br /><span>600$</span>
+          </div>
+        </div>
+        <div class="row d-flex border border-primary" style="height: 100px">
+          <div
+            class="col-md-4 border border-secondary d-flex flex-column align-items-center justify-content-center"
+          >
+            <span>Cantidad a Comprar</span
+            ><input
+              type="number"
+              id="primerArticulo"
+              name="cantidad"
+              min="1"
+              max="100"
+              step="1"
+            />
+          </div>
+          <div
+            class="col-md-4 border border-secondary d-flex flex-column align-items-center justify-content-center"
+          >
+            <span>Cantidad a Comprar</span
+            ><input
+              type="number"
+              id="segundoArticulo"
+              name="cantidad"
+              min="1"
+              max="100"
+              step="1"
+            />
+          </div>
+          <div
+            class="col-md-4 border border-secondary d-flex flex-column align-items-center justify-content-center"
+          >
+            <span>Cantidad a Comprar</span>
+            <input
+              type="number"
+              id="tercerArticulo"
+              name="cantidad"
+              min="1"
+              max="100"
+              step="1"
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        onclick="crearRecibo()"
+        style="margin-left: 700px; margin-top: 20px"
+      >
+        Cotizar
+      </button>
+    </section>
+
+    <!-- PARTE VIEJA DE INICIAR COMPRA -->
+
+    <section id="resumen" class="oculto">
+      <div id="factura" class="container-fluid">
+        <div class="row d-flex" style="height: 100px">
+          <div class="col-md-4 d-flex justify-content-start">
+            <h2>Cotizacion</h2>
+          </div>
+          <div class="col-md-4 offset-md-4 d-flex justify-content-end">
+            <img
+              src="logo-agua.png"
+              alt="imagen"
+              class="img-fluid"
+              style="height: 90px"
+            />
+          </div>
+        </div>
+        <div class="row" style="height: 120px">
+          <div
+            class="col-md-12 d-flex justify-content-center align-items-center flex-column"
+          >
+            <span>Purified Water S.a</span>
+            <span>Fecha:</span>
+            <span>Cuil:20-35422659-2</span>
+            <span>Colpayo 3265</span>
+            <span>011-4756-5869</span>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped" id="tabla">
+            <thead>
+              <tr>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center align-items-center"></div>
+      </div>
+    </section>
+
+    <section id="contactopersonal">
+      <h3>Contactate con nuestro personal en línea</h3>
+      <!-- <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" id="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div> -->
+    </section>
+
+    <footer>
+      <div class="redes-sociales">
+        <a href="http://www.instagram.com/" target="_blank"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
+            alt=""
+            class="instagram"
+        /></a>
+        <h6 class="instagram-url">/ purifiedwater</h6>
+        <a href="http://www.facebook.com/" target="_blank">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/640px-Facebook_Logo_%282019%29.png"
+            alt=""
+            class="facebook"
+        /></a>
+        <h6 class="facebook-url">/ purifiedwater</h6>
+      </div>
+
+      <p class="copyright">© 2023. Puriefied Water. Todos los derechos reservados.</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="resultado.js"></script>
+    <script src="formulario.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="api.js"></script>
+  </body>
+</html>
