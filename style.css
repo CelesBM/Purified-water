@@ -106,6 +106,13 @@
   margin-bottom: 70px;
 }
 
+@media (min-width: 769px) {
+  #section-form {
+    display: flex;
+    margin: 50px 100px 70px 70px;
+  }
+}
+
 .section-form__title {
   font-family: "Roboto", sans-serif;
   color: midnightblue;
@@ -136,8 +143,7 @@ form {
 }
 
 @media (min-width: 769px) {
-  .form {
-    flex-direction: row-reverse;
+  form {
     width: 50%;
     margin-top: 50px;
   }
@@ -156,7 +162,7 @@ form {
 @media (min-width: 769px) {
   .input-group {
     align-content: stretch;
-    width: 80%;
+    width: 80% !important;
   }
 }
 
@@ -218,6 +224,13 @@ textarea::placeholder {
 
 /* PRICE SECTION */
 
+#price-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .price-title {
   font-family: "Roboto", sans-serif;
   color: midnightblue;
@@ -228,9 +241,24 @@ textarea::placeholder {
   padding: 50px 0px 40px 0px;
 }
 
+@media (min-width: 769px) {
+  .price-title {
+    padding: 50px 0px 100px 0px;
+  }
+}
+
 .container-price {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .container-price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 .container-product {
@@ -286,6 +314,13 @@ textarea::placeholder {
   padding: 15px 100px;
   border-radius: 0.5rem;
 }
+
+@media (min-width: 769px) {
+  .price-button {
+    padding: 15px 70px;
+  }
+}
+
 .oculto {
   display: none; /* Oculta el elemento */
 }
@@ -302,6 +337,18 @@ textarea::placeholder {
   margin: 100px 0px 20px 0px;
 }
 
+@media (min-width: 769px) {
+  .contact-person__title {
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 769px) {
+  #contact-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /* FOOTER */
 
 footer {
@@ -311,6 +358,13 @@ footer {
   background-color: #a8d1e9;
 }
 
+@media (min-width: 769px) {
+  footer {
+    width: 100%;
+    height: 300px;
+  }
+}
+
 .redes-sociales {
   display: flex;
   align-items: center;
@@ -318,7 +372,7 @@ footer {
 
 @media (min-width: 769px) {
   .redes-sociales {
-    margin: 300px 0px 0px 400px;
+    margin: 100px 0px 0px 400px;
   }
 }
 
@@ -364,4 +418,10 @@ footer {
   font-size: 12px;
   text-align: center;
   margin-top: 50px;
+}
+
+@media (min-width: 769px) {
+  .copyright {
+    margin-top: 100px;
+  }
 }

@@ -56,7 +56,7 @@
         para vos!
       </h2>
 
-      <form>
+      <form id="form">
         <h3 class="form__title">Contacto</h3>
         <div class="input-group">
           <label for="name">Nombre</label>
@@ -104,7 +104,7 @@
       </form>
     </section>
 
-    <hr>
+    <hr />
 
     <section id="price-form" class="visible">
       <h2 class="price-title">Iniciar Compra</h2>
@@ -132,50 +132,55 @@
               />
             </div>
           </div>
-          <div class="container-product">
-            <img src="bidon.jpg" alt="5lt water" class="img-water" />
-            <div class="product-amount">
-              <div class="product-amount__description">
-                <h6 class="product-title">Bidón de 10 litros</h6>
-                <span class="price">$350</span>
-              </div>
-              <div class="product-amount__select">
-                <h6>Cantidad</h6>
-                <input
-                  class="amount-input"
-                  type="number"
-                  id="segundoArticulo"
-                  name="cantidad"
-                  min="1"
-                  max="100"
-                  step="1"
-                />
-              </div>
-            </div>
-            <div class="container-product">
-                <img src="bidon.jpg" alt="5lt water" class="img-water" />
-                <div class="product-amount">
-                  <div class="product-amount__description">
-                    <h6 class="product-title">Bidón de 20 litros</h6>
-                    <span class="price">$600</span>
-                  </div>
-                  <div class="product-amount__select">
-                    <h6>Cantidad</h6>
-                    <input
-                      class="amount-input"
-                      type="number"
-                      id="tercerrArticulo"
-                      name="cantidad"
-                      min="1"
-                      max="100"
-                      step="1"
-                    />
-                  </div>
-                </div>
-          <button class="price-button" type="button" onclick="crearRecibo()">Cotizar</button>
         </div>
-      </div>
+        <div class="container-product">
+          <img src="bidon.jpg" alt="5lt water" class="img-water" />
+          <div class="product-amount">
+            <div class="product-amount__description">
+              <h6 class="product-title">Bidón de 10 litros</h6>
+              <span class="price">$350</span>
+            </div>
+            <div class="product-amount__select">
+              <h6>Cantidad</h6>
+              <input
+                class="amount-input"
+                type="number"
+                id="segundoArticulo"
+                name="cantidad"
+                min="1"
+                max="100"
+                step="1"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="container-product">
+          <img src="bidon.jpg" alt="5lt water" class="img-water" />
+          <div class="product-amount">
+            <div class="product-amount__description">
+              <h6 class="product-title">Bidón de 20 litros</h6>
+              <span class="price">$600</span>
+            </div>
+            <div class="product-amount__select">
+              <h6>Cantidad</h6>
+              <input
+                class="amount-input"
+                type="number"
+                id="tercerrArticulo"
+                name="cantidad"
+                min="1"
+                max="100"
+                step="1"
+              />
+            </div>
+          </div>
+        </div>
 
+        <button class="price-button" type="button" onclick="crearRecibo()">
+          Cotizar
+        </button>
+      </div>
+    </section>
 
     <!-- PARTE VIEJA DE INICIAR COMPRA -->
 
@@ -223,7 +228,9 @@
     </section>
 
     <section id="contact-person">
-      <h3 class="contact-person__title">Contactate con nuestro personal en línea</h3>
+      <h3 class="contact-person__title">
+        Contactate con nuestro personal en línea
+      </h3>
       <!-- <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -252,7 +259,9 @@
         <h6 class="facebook-url">/ purifiedwater</h6>
       </div>
 
-      <p class="copyright">© 2023. Puriefied Water. Todos los derechos reservados.</p>
+      <p class="copyright">
+        © 2023. Puriefied Water. Todos los derechos reservados.
+      </p>
     </footer>
 
     <script
